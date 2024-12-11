@@ -8,8 +8,8 @@ class Locus:
     desc = ""
     name = ""
 
-    allel_x = 0
-    allel_y = 0
+    allel_a = 0
+    allel_b = 0
     init = 0
     locus = 0
 
@@ -22,13 +22,13 @@ class Locus:
         self.reset()
 
     def reset(self):
-        self.allel_x = self.init
-        self.allel_y = self.init
+        self.allel_a = self.init
+        self.allel_b = self.init
         self.locus = self.init
         self.reset_code()
 
     def reset_code(self):
-        self.code = "self.locus=self.allel_x"
+        self.code = "self.locus=self.allel_a"
 
     def run(self):
         try:
@@ -39,11 +39,11 @@ class Locus:
             return False
 
     def randomize(self):
-        self.allel_x = self.locus
-        self.allel_y = self.locus
+        self.allel_a = self.locus
+        self.allel_b = self.locus
 
         i = 10
-        while i > 0 and self.allel_x == self.allel_y:
+        while i > 0 and self.allel_a == self.allel_b:
             adjustment = 0.5 + random.random()
-            self.allel_y = math.floor(self.locus * adjustment)
+            self.allel_b = math.floor(self.locus * adjustment)
             i -= 1

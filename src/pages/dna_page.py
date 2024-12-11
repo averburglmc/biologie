@@ -30,10 +30,10 @@ class DnaPage(BaseFrame):
             if locus == self.locus:
                 self.canvas.create_rectangle(250, current_y, 550, current_y + 250, outline="black", width=4, fill=locus.color)
                         
-                self.canvas.create_text(260, current_y + 10, text="allel_x", fill="#444444", font=("Times", 12), anchor=NW)
-                self.canvas.create_text(260, current_y + 25, text=locus.allel_x, fill="#444444", font=("Times", 24), anchor=NW)
-                self.canvas.create_text(540, current_y + 10, text="allel_y", fill="#444444", font=("Times", 12), anchor=NE)
-                self.canvas.create_text(540, current_y + 25, text=locus.allel_y, fill="#444444", font=("Times", 24), anchor=NE)
+                self.canvas.create_text(260, current_y + 10, text="allel_a", fill="#444444", font=("Times", 12), anchor=NW)
+                self.canvas.create_text(260, current_y + 25, text=locus.allel_a, fill="#444444", font=("Times", 24), anchor=NW)
+                self.canvas.create_text(540, current_y + 10, text="allel_b", fill="#444444", font=("Times", 12), anchor=NE)
+                self.canvas.create_text(540, current_y + 25, text=locus.allel_b, fill="#444444", font=("Times", 24), anchor=NE)
                 self.canvas.create_text(400, current_y + 10, text="heterozygoot", fill="#888844", font=("Times", 12), anchor=N)
                 self.canvas.create_text(400, current_y + 25, text=locus.name, fill="#888844", font=("Times", 24), anchor=N)
 
@@ -51,9 +51,9 @@ class DnaPage(BaseFrame):
                 current_y += 275
             else:
                 self.canvas.create_rectangle(250, current_y, 550, current_y + 75, outline="black", width=4, fill=locus.color)
-                self.canvas.create_text(260, current_y + 10, text="allel_x", fill="#444444", font=("Times", 12), anchor=NW)
+                self.canvas.create_text(260, current_y + 10, text="allel_a", fill="#444444", font=("Times", 12), anchor=NW)
                 self.canvas.create_text(260, current_y + 25, text=locus.locus, fill="#444444", font=("Times", 24), anchor=NW)
-                self.canvas.create_text(540, current_y + 10, text="allel_y", fill="#444444", font=("Times", 12), anchor=NE)
+                self.canvas.create_text(540, current_y + 10, text="allel_b", fill="#444444", font=("Times", 12), anchor=NE)
                 self.canvas.create_text(540, current_y + 25, text=locus.locus, fill="#444444", font=("Times", 24), anchor=NE)
                 self.canvas.create_text(400, current_y + 10, text="homozygoot", fill="#444444", font=("Times", 12), anchor=N)
                 self.canvas.create_text(400, current_y + 25, text=locus.name, fill="#444444", font=("Times", 24), anchor=N)
