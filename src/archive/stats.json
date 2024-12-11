@@ -1,0 +1,19 @@
+{
+    "creatures": [
+        {
+            "type": "predator",
+            "speed": 10,
+            "food_to_reproduce": 20
+        },
+        {
+            "type": "prey",
+            "speed": 5,
+            "food_to_reproduce": 10
+        },
+        {
+            "type": "predator",
+            "speed": 10,
+            "food_to_reproduce": 20
+        }
+    ]
+}
