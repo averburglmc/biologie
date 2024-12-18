@@ -1,3 +1,5 @@
+import re
+
 from src.pages.base_page import *
 from tkinter import *
 
@@ -62,7 +64,13 @@ class DnaPage(BaseFrame):
 
 
     def code_changed(self, event):
-        value = self.input.get("1.0", END)
+        value = self.input.get("1.0", END + "-1c")
+
+        cursor_pos = self.input.index(INSERT)
+
+        value = re.sub("[0-9]", "", value)
+        self.input.delete("1.0", END)
+        self.input.insert(END, value)
 
         if len(value) > self.chromosome.get(INTELLECT).locus + 1:
             self.input.delete("1.0", END)
@@ -70,6 +78,8 @@ class DnaPage(BaseFrame):
         else:
             self.previous_value = value
             self.locus.code = value
+
+        self.input.mark_set(INSERT, cursor_pos)
 
     def send(self):
         executed = self.locus.run()
