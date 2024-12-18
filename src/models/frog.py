@@ -92,14 +92,14 @@ class Frog(Sprite):
             return
 
         if self.state == LICK2:
-            collisions = self.canvas.find_overlapping(coords[0], coords[1], coords[0] + 216, coords[1] + 64)
-            if collisions[-1] != self.id:
+            collisions = self.canvas.find_overlapping(coords[0], coords[1], coords[0] + 216, coords[1] + 12)
+            if len(collisions) > 0 and collisions[-1] != self.id:
                 name = self.page.try_destroy_enemy(collisions[-1], 1)
                 if name == "bird":
                     self.hurt()
         else:
-            collisions = self.canvas.find_overlapping(coords[0], coords[1], coords[0] + 64, coords[1] + 64)
-            if collisions[-1] != self.id:
+            collisions = self.canvas.find_overlapping(coords[0], coords[1], coords[0] + 64, coords[1] + 12)
+            if len(collisions) > 0 and collisions[-1] != self.id:
                 name = self.page.destroy_enemy(collisions[-1], 1)
                 if name != "love":
                     self.hurt()
