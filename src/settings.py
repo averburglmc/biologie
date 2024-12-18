@@ -7,12 +7,29 @@ HEALTH = "Gezondheid"
 INTELLECT = "Intelligentie"
 COURAGE = "Moed"
 
-INIT_SPEED = 20
-INIT_HEALTH = 30
-INIT_INTELLECT = 23
-INIT_COURAGE = 100
+UP_KEY = "w"
+DOWN_KEY = "s"
+LEFT_KEY = "a"
+RIGHT_KEY = "d"
 
-SPEED_DESC = "Bepaalt hoe snel je beweegt."
-HEALTH_DESC = "Bepaalt hoe vaak je geraakt mag worden."
-INTELLECT_DESC = "Bepaalt hoe veel symbolen je kunt gebruiken tijdens coderen."
-COURAGE_DESC = "Bepaalt hoe ver je naar rechts kunt bewegen."
+MENU_VIEW = "Menu View"
+GAME_VIEW = "Game View"
+DNA_VIEW = "DNA View"
+
+PLAYER = "frog"
+FRIEND_FROG = "love"
+ENEMY_FLY = "fly"
+ENEMY_BIRD = "bird"
+UI_HEART = "heart"
+
+IDLE = "idle"
+LICK = "lick"
+HURT = "hurt"
+EMPTY = "empty"
+
+NAME = "name"
+ANIMATIONS = "animations"
+FRAMES = "frames"
+DESCRIPTION = "description"
+VALUE = "value"
+COLOR = "color"
